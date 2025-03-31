@@ -6,12 +6,16 @@ using System.Threading.Tasks;
 
 namespace Arv
 {
-    public class Doctor
+    public class Doctor : Person
     {
         public string Specialty { get; set; }
 
-        public Doctor(string specialty)
+        public Doctor(string name, int tlfNumber, string email, string specialty)
+            : base(name, tlfNumber, email)
         {
+            Name = name;
+            PhoneNumber = tlfNumber;
+            EmailAddress = email;
             Specialty = specialty;
         }
     }
